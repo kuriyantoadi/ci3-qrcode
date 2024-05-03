@@ -13,7 +13,7 @@ class Qr extends CI_Controller {
         $qr['data'] = 'http://h4nk.blogspot.com/2016/11/generate-qr-code-dengan-codeigniter.html';
         $qr['level'] = 'H';
         $qr['size'] = 2;
-        $qr['savename'] = FCPATH.'qr.png';
+        $qr['savename'] = FCPATH.'assets/qr/qr.png'; // Menyimpan gambar di assets/qr
         $this->ciqrcode->generate($qr);
 
         $data['qr_image'] = base_url().'qr.png'; // Mengirim URL gambar ke view
